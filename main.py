@@ -82,9 +82,9 @@ with Session.begin() as session:
 
 logging.info(f"scraping total time {time.time() - start_time}")
 
-save_filename = f"feed_{nowdt}.csv"
+# save_filename = f"feed_{nowdt}.csv"
 
-if not os.path.exists("./data"):
-    os.makedirs("./data")
+# if not os.path.exists("./data"):
+#     os.makedirs("./data")
 
-records_df.to_csv(f"./data/{save_filename}")
+# records_df.to_csv(f"./data/{save_filename}")
