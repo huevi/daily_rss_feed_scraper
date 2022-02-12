@@ -1,0 +1,13 @@
+{
+    "websites": {
+        "thenewsminute": [
+            "https://www.thenewsminute.com/news.xml",
+            "https://www.thenewsminute.com/andhra.xml",
+            "https://www.thenewsminute.com/karnataka.xml",
+            "https://www.thenewsminute.com/kerala.xml",
+            "https://www.thenewsminute.com/tamil.xml",
+            "https://www.thenewsminute.com/telangana.xml",
+            "https://www.thenewsminute.com/education.xml"
+        ]
+    }
+}
