@@ -2,7 +2,7 @@ name: Scrape rss feed data
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 */8 * * *' # Every hour. Ref https://crontab.guru/examples.html
+    - cron:  '0 */12 * * *' # Every hour. Ref https://crontab.guru/examples.html
 
 jobs:
   build:
