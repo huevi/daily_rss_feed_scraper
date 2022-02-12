@@ -30,7 +30,7 @@ nowdt = datetime.datetime.now(intz).strftime("%d%m%Y%H%M")
 DB_URL = os.getenv("DB_URL")
 CERT_URL = os.getenv("CERT_URL")
 
-r= requests.get(CERT_URL)
+r = requests.get(CERT_URL)
 with open("root.crt", "wb") as f:
     f.write(r.content)
 # os.chmod("root.crt", 0o644)
@@ -63,7 +63,7 @@ base = declarative_base()
 
 
 class RssFeed(base):
-    __tablename__ = "rss_feed"
+    __tablename__ = "daily_rss_feed"
 
     index = Column(String, primary_key=True)
     ist = Column(String)
@@ -81,3 +81,10 @@ with Session.begin() as session:
 
 
 logging.info(f"scraping total time {time.time() - start_time}")
+
+save_filename = f"feed_{nowdt}.csv"
+
+if not os.path.exists("./data"):
+    os.makedirs("./data")
+
+records_df.to_csv(f"./data/{save_filename}")
