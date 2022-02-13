@@ -53,9 +53,10 @@ def scraper(url):
 
 
 records_df = pd.DataFrame()
-for url in config.websites.thenewsminute:
-    data = scraper(url)
-    records_df = pd.concat([records_df, data], axis=0)
+for website in config.websites:
+    for url in config.websites[website]:
+        data = scraper(url)
+        records_df = pd.concat([records_df, data], axis=0)
 records = records_df.to_dict(orient="records")
 
 db = create_engine(DB_URL)

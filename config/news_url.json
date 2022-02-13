@@ -8,6 +8,12 @@
             "https://www.thenewsminute.com/tamil.xml",
             "https://www.thenewsminute.com/telangana.xml",
             "https://www.thenewsminute.com/education.xml"
+        ],
+        "onmanorama": [
+            "https://www.onmanorama.com/news/kerala.feeds.onmrss.xml",
+            "https://www.onmanorama.com/news/india.feeds.onmrss.xml",
+            "https://www.onmanorama.com/news/world.feeds.onmrss.xml",
+            "https://www.onmanorama.com/news/business.feeds.onmrss.xml"
         ]
     }
 }
