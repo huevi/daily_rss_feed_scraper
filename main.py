@@ -40,7 +40,7 @@ with open("./config/news_url.json", "r") as file:
 
 config = DotMap(config)
 
-
+###scrapper 
 def scraper(url):
     d = feedparser.parse(url)
     df_dict = {}
